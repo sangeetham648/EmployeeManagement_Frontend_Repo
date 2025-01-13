@@ -1,0 +1,16 @@
+.navbar{
+    background-color: blueviolet;
+}
+.navbar .navbar-brand{
+    color: #fff;
+}
+.navbar .nav-link{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+@media (max-width: 576) {
+    .navbar .nav-link{
+        margin-right: 0;
+    }
+}
