@@ -12,7 +12,7 @@ const Dashboard = () =>{
         const fetchEmployees = async() =>{
            
             try{
-                const response = await fetch("http://localhost:8080/api/allEmployees");
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/allEmployees`);
                 const data=await response.json();
                 setEmployees(data);
             }catch(error){
@@ -24,7 +24,7 @@ const Dashboard = () =>{
 
     const handleDelete = async (employeeId) =>{
         try{
-            const response = await fetch(`http://localhost:8080/api/deleteEmployee/${employeeId}`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/deleteEmployee/${employeeId}`,{
                 method: "DELETE",
             });
             if(response.ok){
